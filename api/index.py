@@ -167,5 +167,5 @@ def home():
     return render_template('index.html', restaurants=restaurants)
 
 # WSGI handler
-def handler(request, context):
-    return app(request.environ, context.start_response)
+def handler(event, context):
+    return app(event, context)
