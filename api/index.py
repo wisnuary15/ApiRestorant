@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_restful import Api, Resource
 from data import restaurants, details, menus
 from datetime import datetime
