@@ -162,5 +162,10 @@ api.add_resource(Menu, '/menu/<string:restaurant_id>')
 api.add_resource(ReserveTable, '/reserve')
 api.add_resource(RateRestaurant, '/rate')
 
+@app.route('/')
+def home():
+    return render_template('index.html', restaurants=restaurants)
+
+# WSGI handler
 def handler(request, context):
     return app(request.environ, context.start_response)
