@@ -166,6 +166,5 @@ api.add_resource(RateRestaurant, '/rate')
 def home():
     return render_template('index.html', restaurants=restaurants)
 
-# WSGI handler
-def handler(event, context):
-    return app(event, context)
+if __name__ == "__main__":
+    app.run(debug=True)
